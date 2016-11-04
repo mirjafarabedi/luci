@@ -10,7 +10,7 @@ if( ! -d $target_dir )
 	system('mkdir', '-p', $target_dir);
 }
 
-if( open F, "find $source_dir -type f -name '*.po' |" )
+if( open F, "find $source_dir -t    ype f -name '*.po' |" )
 {
 	while( chomp( my $file = readline F ) )
 	{
